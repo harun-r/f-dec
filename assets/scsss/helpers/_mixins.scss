@@ -1,0 +1,67 @@
+// Sizing shortcuts
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Font size & Line height
+@mixin font-size($fontSize) {
+  font-size: ($fontSize / 16) + rem;
+}
+
+@mixin line-height($lineHeight) {
+  line-height: ($lineHeight / 16) + rem;
+}
+
+// Link
+@mixin link($color-link) {
+  text-decoration: none;
+  color: $color-link;
+}
+
+// List type
+@mixin list-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Center-align a block level element
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Absolute Position
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+// Fixed Position
+@mixin fixed($top: null, $right: null, $bottom: null, $left: null) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: fixed;
+}
+
+// Image Background
+@mixin background($imgpath, $position: 0 0, $repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    repeat: $repeat;
+  }
+}
+
+@mixin display-center {
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(center);
+}

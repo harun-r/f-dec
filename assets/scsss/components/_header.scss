@@ -1,0 +1,25 @@
+.header{
+    width: 100%;
+    padding: 10px 0;
+    background-color: $dark-blue;
+    &--absolute{
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: 99;
+        background-color: transparent;
+    }
+
+
+    // language
+    .language{
+        display: inline-block;
+        border: 1px solid $white;
+        border-radius: 4px;
+        padding:3px 4px;
+        color: $white;
+        font-weight: 600;
+        @include font-size(15);
+        @include size(28px,28px);
+    }
+}
